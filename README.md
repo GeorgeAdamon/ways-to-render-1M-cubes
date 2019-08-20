@@ -14,11 +14,12 @@ All the ways to efficiently render 1 Million cubes in Unity3d (I could think of)
 #### Description
 ### Using DrawMeshInstancedIndirect
 #### Description
-_Using a single Mesh Instance, a single Material Instance and a custom shader accepting arbitrary StructuredBuffers (like positions,rotations,colors, etc) and triggering the instanced drawing by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame. The shader should be written to care of the translation/scale/rotation of each instance._
+_Using a single Mesh Instance, a single Material Instance and a custom Shader accepting arbitrary StructuredBuffers (like positions,rotations,colors, etc) and triggering the instanced drawing by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame. The shader should be written to care of the translation/scale/rotation of each instance._
 #### Benefits
 * Arbitrary meshes can be used
 * Sub-meshes can be instanced separately
 * The transformation matrix for each element of the grid could be defined entirely on the shader
+* Small memory footprint, since only 1 Mesh is allocated in memory
 
 <br/>
 
