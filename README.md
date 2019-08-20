@@ -36,7 +36,6 @@ The shader is written to take care of the translation/scale/rotation of each ins
 #### Description
 _Using a single Mesh Instance, a single Material Instance, a custom Shader accepting arbitrary Buffers (like positions, rotations, colors etc.) and a Compute Shader that sorts the indices of the instances in parallel(Bitonic Merge Sort), based on their distance to the Camera. The instanced drawing is trigerred by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame, after the execution of the sorting.
 The shader is written to take care of the translation/scale/rotation of each instance, and draw the instances in the correct order, with the ones further away from the camera drawn first._
-Before the
 #### Pros
 * Arbitrary meshes can be used
 * Sub-meshes can be instanced separately
