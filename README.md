@@ -25,8 +25,9 @@ The shader is written to take care of the translation/scale/rotation of each ins
 * Small memory footprint, since only 1 Mesh is allocated in memory
 #### Cons
 * Performance is dependent on the total amount of triangles that need to be rendered (Instances x Triangles per Instance)
-* No Z-Sorting is performed automatically. Problematic with transparent materials.
+* No Z-Sorting is performed automatically, which becomes really problematic with transparent materials.
 * No culling is performed automatically.
+* Not supported by every platform.
 
 ### Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting
 <br/>
