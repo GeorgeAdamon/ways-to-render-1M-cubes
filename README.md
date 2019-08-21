@@ -9,16 +9,16 @@ All the ways to efficiently render 1 Million cubes in Unity3d (I could think of)
 ---
 ## Instanced Rendering
 
-### Using MeshRenderers & MaterialPropertyBlock
+### [Using MeshRenderers & MaterialPropertyBlock]
 #### Description
 #### Pros
 ---
-### Using DrawMeshInstanced
+### [Using DrawMeshInstanced]
 #### Description
 #### Pros
 #### Cons
 ---
-### Using DrawMeshInstancedIndirect
+### [Using DrawMeshInstancedIndirect]
 #### Description
 _Using a single Mesh Instance, a single Material Instance and a custom Shader accepting arbitrary Buffers (like positions, rotations, colors etc.) and triggering the instanced drawing by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame.
 The shader is written to take care of the translation/scale/rotation of each instance._
@@ -33,7 +33,7 @@ The shader is written to take care of the translation/scale/rotation of each ins
 * No culling is performed automatically.
 * Not supported by every platform.
 ---
-### Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting
+### [Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting]
 #### Description
 _Using a single Mesh Instance, a single Material Instance, a custom Shader accepting arbitrary Buffers (like positions, rotations, colors etc.) and a Compute Shader that sorts the indices of the instances in parallel(Bitonic Merge Sort), based on their distance to the Camera. The instanced drawing is trigerred by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame, after the execution of the sorting.
 The shader is written to take care of the translation/scale/rotation of each instance, and draw the instances in the correct order, with the ones further away from the camera drawn first._
@@ -54,12 +54,12 @@ The shader is written to take care of the translation/scale/rotation of each ins
 
 ## Procedural Meshing
 
-### Generating the Cubes as a single Mesh
+### [Generating the Cubes as a single Mesh]
 #### Description
 #### Pros
 #### Cons
 ---
-### Generating the Cubes using a Geometry Shader
+### [Generating the Cubes using a Geometry Shader]
 #### Description
 #### Pros
 #### Cons
@@ -69,12 +69,12 @@ The shader is written to take care of the translation/scale/rotation of each ins
 
 ## Raymarching
 
-### Using a repeating Cube Signed Distance Field
+### [Using a repeating Cube Signed Distance Field]
 #### Description
 #### Pros
 #### Cons
 ---
-### Using a Volumetric RenderTexture
+### [Using a Volumetric RenderTexture]
 #### Description
 #### Pros
 #### Cons
