@@ -15,6 +15,7 @@ All the ways to efficiently render 1 Million cubes in Unity3d (I could think of)
 * Guaranteed to work on every platform
 * Unity handles culling ans Z-sorting efficiently and natively
 * Somewhat easier to debug, since objects actually exist in the Scene
+* The cubes can be interacted with & exhibit scripted behaviour
 #### Cons
 * Memory-hungry since each **visual** instance is also a **logical** one
 * Updating the MaterialPropertyBlock requires serial iteration through all of the instances
