@@ -4,19 +4,20 @@ All the ways to efficiently render 1 Million cubes in Unity3d (I could think of)
 
 ## ECS 
 
-<br/>
 
+---
+---
 ## Instanced Rendering
 
 ### Using MeshRenderers & MaterialPropertyBlock
 #### Description
 #### Pros
-
+---
 ### Using DrawMeshInstanced
 #### Description
 #### Pros
 #### Cons
-
+---
 ### Using DrawMeshInstancedIndirect
 #### Description
 _Using a single Mesh Instance, a single Material Instance and a custom Shader accepting arbitrary Buffers (like positions, rotations, colors etc.) and triggering the instanced drawing by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame.
@@ -31,7 +32,7 @@ The shader is written to take care of the translation/scale/rotation of each ins
 * No Z-Sorting is performed automatically, which becomes really problematic with transparent materials.
 * No culling is performed automatically.
 * Not supported by every platform.
-
+---
 ### Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting
 #### Description
 _Using a single Mesh Instance, a single Material Instance, a custom Shader accepting arbitrary Buffers (like positions, rotations, colors etc.) and a Compute Shader that sorts the indices of the instances in parallel(Bitonic Merge Sort), based on their distance to the Camera. The instanced drawing is trigerred by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame, after the execution of the sorting.
@@ -48,7 +49,8 @@ The shader is written to take care of the translation/scale/rotation of each ins
 * Not supported by every platform.
 * Sorting a million instances every frame, adds a computational overhead.
 
-<br/>
+---
+---
 
 ## Procedural Meshing
 
@@ -56,13 +58,14 @@ The shader is written to take care of the translation/scale/rotation of each ins
 #### Description
 #### Pros
 #### Cons
-
+---
 ### Generating the Cubes using a Geometry Shader
 #### Description
 #### Pros
 #### Cons
 
-<br/>
+---
+---
 
 ## Raymarching
 
@@ -70,7 +73,7 @@ The shader is written to take care of the translation/scale/rotation of each ins
 #### Description
 #### Pros
 #### Cons
-
+---
 ### Using a Volumetric RenderTexture
 #### Description
 #### Pros
