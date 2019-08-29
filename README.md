@@ -7,9 +7,9 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
 
 ---
 ---
-## Basic Instanced Rendering
+## 1. Instanced Rendering
 
-### [Using MeshRenderers & MaterialPropertyBlock]()
+### [1.1. Using MeshRenderers & MaterialPropertyBlock]()
 #### Description
 _Each cube is Instantiated as a separate GameObject with Transform, MeshFilter & MeshRenderer components attached to it. 
 The MeshFilters of all the cubes point to a single (shared) Mesh asset. 
@@ -33,7 +33,7 @@ Each cube is individually coloured via a [MaterialPropertyBlock](https://docs.un
 
 ---
 
-### [Using DrawMeshInstanced & MaterialPropertyBlock]()
+### [1.2. Using DrawMeshInstanced & MaterialPropertyBlock]()
 #### Description
 _Using a single Mesh Instance, a single Material Instance and a Matrix4x4 array containing the transformation of each instance.
 The instanced drawing is trigerred by calling the [Graphics.DrawMeshInstanced](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstanced.html) on every frame._
@@ -54,7 +54,7 @@ The instanced drawing is trigerred by calling the [Graphics.DrawMeshInstanced](h
 
 ---
 
-### [Using DrawMeshInstancedIndirect & Custom Shaders]()
+### [1.3 Using DrawMeshInstancedIndirect & Custom Shaders]()
 #### Description
 _Using a single Mesh Instance, a single Material Instance and a custom Shader accepting arbitrary Buffers (like positions, rotations, colors etc.) and triggering the instanced drawing by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame.
 The shader is written to take care of the translation/scale/rotation of each instance._
@@ -73,7 +73,7 @@ The shader is written to take care of the translation/scale/rotation of each ins
 
 ---
 
-### [Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting]()
+### [1.4. Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting]()
 #### Description
 _Using a single Mesh Instance, a single Material Instance, a custom Shader accepting arbitrary Buffers (like positions, rotations, colors etc.) and a Compute Shader that sorts the indices of the instances in parallel(Bitonic Merge Sort), based on their distance to the Camera. The instanced drawing is trigerred by calling the [Graphics.DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) on every frame, after the execution of the sorting.
 The shader is written to take care of the translation/scale/rotation of each instance, and draw the instances in the correct order, with the ones further away from the camera drawn first._
@@ -94,9 +94,9 @@ The shader is written to take care of the translation/scale/rotation of each ins
 ---
 ---
 
-## Procedural Meshing
+## 2. Procedural Meshing
 
-### [Generating the Cubes as a single Mesh]()
+### [2.1. Generating the Cubes as a single Mesh]()
 #### Description
 _A single mesh containing the Vertices, Indices, Normals and Colors of all the cubes is generated procedurally, and passed to the MeshFilter of a GameObject. The buffers (vertex,index,normal,color etc) of the Mesh are generated either in the CPU using the Job System or in the GPU using a ComputeShader._
 #### Pros
@@ -111,7 +111,7 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 
 ---
 
-### [Generating the Cubes using a Geometry Shader]()
+### [2.2. Generating the Cubes using a Geometry Shader]()
 #### Description
 #### Pros
 #### Cons
@@ -119,9 +119,9 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 ---
 ---
 
-## Raymarching
+## 3. Raymarching
 
-### [Using a repeating Cube Signed Distance Field]()
+### [3.1. Using a repeating Cube Signed Distance Field]()
 #### Description
 #### Pros
 * 1 Draw Call for the whole grid.
@@ -135,7 +135,7 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 * Occlusion from other Unity objects has to be handled inside the shader. (It's not automatic)
 ---
 
-### [Using a Volumetric RenderTexture]()
+### [3.2. Using a Volumetric RenderTexture]()
 #### Description
 #### Pros
 #### Cons
