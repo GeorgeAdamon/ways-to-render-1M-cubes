@@ -126,11 +126,11 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 #### Pros
 * 1 Draw Call for the whole grid.
 * Compatible with every platform by default.
-* Arbitrary, cube-like repeating SDFs are very easy to implement, if they can be described as solid operations.
+* Arbitrary, cube-like repeating SDFs are *very* easy to implement, if they can be described as solid operations.
 * Performance is *independent* of the total amount of instances that need to be rendered. Rendering 1 Cube is the same as 1 million cubes.
 * Smallest possible memory footprint, since the grid does not need any buffers whatsoever, it's all written as a distance function, which is evaluated continuously at runtime.
 #### Cons
-* Arbitrary, cube-like repeating SDFs are impossible to implement, if they can't be described as solid operations.
+* Arbitrary, cube-like repeating SDFs are *impossible* to implement, if they can't be described as solid operations.
 * The cubes are incompatible-with and invisible-to any other Unity system (Real-time Lights, Lightmapping, Physics, Reflections etc)
 * Occlusion from other Unity objects has to be handled inside the shader. (It's not automatic)
 ---
