@@ -106,7 +106,7 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 * Works with real-time Shadows, Lightmapping, Light/Reflection Probes.
 #### Cons
 * Arbitrary, cube-like meshes are difficult to implement, since the geometry has to be described mathematically.
-* The automatic upload of this huge monolithic mesh to the GPU memory, introduces a considerable spike.
+* The upload of a huge monolithic mesh to the GPU memory, introduces a big performance spike.
 * No culling (occlusion or  frustrum) is performed, since the cubes belong to one object.
 
 ---
