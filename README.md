@@ -11,7 +11,10 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
 
 ### [Using MeshRenderers & MaterialPropertyBlock]()
 #### Description
-_Each cube is Instantiated as a separate GameObject with Transform, MeshFilter & MeshRenderer components attached to it. The MeshFilters of all the cubes point to a single (shared) Mesh asset. The MeshRenderers of all the cubes point to a single (shared) Material asset, which supports [GPU Instancing](https://docs.unity3d.com/Manual/GPUInstancing.html). The cubes' individual colors are set via a [MaterialPropertyBlock](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.SetColor.html) 
+_Each cube is Instantiated as a separate GameObject with Transform, MeshFilter & MeshRenderer components attached to it. 
+The MeshFilters of all the cubes point to a single (shared) Mesh asset. 
+The MeshRenderers of all the cubes point to a single (shared) Material asset, which supports [GPU Instancing](https://docs.unity3d.com/Manual/GPUInstancing.html). 
+Each cube is individually coloured via a [MaterialPropertyBlock](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.SetColor.html)_
 #### Pros
 * Compatible with every platform by default.
 * Unity handles culling and Z-sorting efficiently and natively.
