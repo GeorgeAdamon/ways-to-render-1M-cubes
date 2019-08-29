@@ -23,9 +23,10 @@ Each cube is individually coloured via a [MaterialPropertyBlock](https://docs.un
 * Works with real-time Shadows, Lightmapping, Light/Reflection Probes, Physics. 
 #### Cons
 * Memory-hungry since each **visual** instance is also a separate GameObject (Transform + MeshFilter + MeshRenderer).
-* Adds Editor overhead, since the Scene file will now contain 1 million objects.
-* Updating the MaterialPropertyBlock requires serial iteration through all of the instances
-* Performance is dependent on the total amount of triangles that need to be rendered (Instances x Triangles per Instance)
+* Adds Editor overhead, since the Scene file will now contain 1 million individual objects.
+* Increases the project size, since each instance's description is embedded into the file.
+* Updating the MaterialPropertyBlock requires serial iteration through all of the instances.
+* Performance is dependent on the total amount of triangles that need to be rendered (Instances x Triangles per Instance).
 
 ---
 
