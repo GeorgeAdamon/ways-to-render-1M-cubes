@@ -1,5 +1,5 @@
 # Ways to Render 1 Million Cubes
-All the ways to efficiently render 1 Million cubes in Unity3d (I could think of).
+All the ways to efficiently render 1 Million individually coloured cubes in Unity3d (I could think of).
 **WIP: This repository will be filled with implementations over time**
 
 ## ECS 
@@ -7,17 +7,20 @@ All the ways to efficiently render 1 Million cubes in Unity3d (I could think of)
 
 ---
 ---
-## Instanced Rendering
+## Basic Instanced Rendering
 
 ### [Using MeshRenderers & MaterialPropertyBlock]()
 #### Description
+_Each cube is Instantiated as a separate GameObject with Transform, MeshFilter & MeshRenderer components attached to it. The MeshFilters of all the cubes point to a single (shared) Mesh asset. The MeshRenderers of all the cubes point to a single (shared) Material asset, which supports [GPU Instancing](https://docs.unity3d.com/Manual/GPUInstancing.html). The cubes' individual colors are set via a [MaterialPropertyBlock](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.SetColor.html) 
 #### Pros
-* Guaranteed to work on every platform
-* Unity handles culling ans Z-sorting efficiently and natively
-* Somewhat easier to debug, since objects actually exist in the Scene
-* The cubes can be interacted with & exhibit scripted behaviour
+* Compatible with every platform by default.
+* Unity handles culling and Z-sorting efficiently and natively.
+* Somewhat easier to debug, since objects actually exist in the Scene and can be individually inspected.
+* The cubes can be interacted with & exhibit scripted behaviour.
+* Works with real-time Shadows, Lightmapping, Light/Reflection Probes, Physics. 
 #### Cons
-* Memory-hungry since each **visual** instance is also a **logical** one
+* Memory-hungry since each **visual** instance is also a separate GameObject (Transform + MeshFilter + MeshRenderer).
+* Adds Editor overhead, since the Scene file will now contain 1 million objects.
 * Updating the MaterialPropertyBlock requires serial iteration through all of the instances
 * Performance is dependent on the total amount of triangles that need to be rendered (Instances x Triangles per Instance)
 
