@@ -3,11 +3,11 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
 **WIP: This repository will be filled with implementations over time**
 
 ## Index
-* [Concepts](#concepts)
+* [Concepts](#concepts) -----------------------------------------------------------------------------------------------
   + [**Positional Data Generation**](#positional-data-generation)
   + [**Cube Representation**](#cube-representation)
   + [**Rendering**](#rendering)
-* [Implementations](#implementations)
+* [Implementations](#implementations) ---------------------------------------------------------------------------------------
   + [**1. Instanced Rendering**](#1-instanced-rendering)
     - [_1.1 Using Plain Old Mesh Renderers (POMR) & MaterialPropertyBlock_](#11-using-plain-old-mesh-renderers-pomr--materialpropertyblock)
     - [_1.2 Using DrawMeshInstanced & MaterialPropertyBlock_](#12-using-drawmeshinstanced--materialpropertyblock)
