@@ -158,6 +158,7 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 ##### Description
 ##### Pros
 ##### Cons
+* Surface shading is not supported in geometry shaders, so all the light calculations have to be implemented **from scratch**.
 
 ---
 
