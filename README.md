@@ -2,6 +2,29 @@
 All the ways to efficiently render 1 Million individually coloured cubes in Unity3d (I could think of).
 **WIP: This repository will be filled with implementations over time**
 
+
+* [Concepts](#concepts)
+  + [Positional Data Generation](#positional-data-generation)
+  + [Cube Representation](#cube-representation)
+  + [Rendering](#rendering)
+* [Implementations](#implementations)
+  + [1. Instanced Rendering](#1-instanced-rendering)
+    - [1.1 Using Plain Old Mesh Renderers (POMR) & MaterialPropertyBlock](#11-using-plain-old-mesh-renderers--pomr----materialpropertyblock---)
+    - [1.2 Using DrawMeshInstanced & MaterialPropertyBlock](#12-using-drawmeshinstanced---materialpropertyblock---)
+    - [1.3 Using DrawMeshInstancedIndirect & Custom Shaders](#13-using-drawmeshinstancedindirect---custom-shaders---)
+    - [1.4 Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting](#14-using-drawmeshinstancedindirect-with-custom-gpu-z-sorting---)
+  + [2. Procedural Meshing](#2-procedural-meshing)
+    - [2.1 Generating the Cubes as a single Mesh](#-21-generating-the-cubes-as-a-single-mesh---)
+    - [2.2 Generating the Cubes using a Geometry Shader](#-22-generating-the-cubes-using-a-geometry-shader---)
+    - [2.3 "Stamping" the Cubes into a single Mesh](#-23--stamping--the-cubes-into-a-single-mesh---)
+  + [3. Raymarching](#3-raymarching)
+    - [3.1 Using a repeating Cube Signed Distance Field](#-31-using-a-repeating-cube-signed-distance-field---)
+    - [3.2 Using a Volumetric RenderTexture](#-32-using-a-volumetric-rendertexture---)
+  + [4. Particles](#4-particles)
+    - [4.1 Using the Shuriken (CPU) Particle System](#-41-using-the-shuriken--cpu--particle-system---)
+    - [4.2 Using the Visual Effects Graph (GPU)](#-42-using-the-visual-effects-graph--gpu----)
+  + [5. ECS](#5-ecs)
+
 ---
 ---
 
