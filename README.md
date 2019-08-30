@@ -29,9 +29,19 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
 ---
 
 ## Concepts
+
 ### Positional Data Generation
+#### Cached (Pre-generated)
+#### On-The-Fly
+
 ### Cube Representation
-### Rendering
+#### Explicit (Mesh-Based)
+#### Implicit (SDF)
+
+### Cube Rendering
+#### Procedural
+#### Instanced
+#### Raymarched
 
 ---
 ---
