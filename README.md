@@ -22,7 +22,7 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
     - [_3.2 Using a Volumetric RenderTexture_](#32-using-a-volumetric-rendertexture)
   + [**4. Particles**](#4-particles)
     - [_4.1 Using the Shuriken (CPU) Particle System_](#41-using-the-shuriken-cpu-particle-system)
-    - [_4.2 Using the Visual Effects Graph (GPU)_](#-42-using-the-visual-effects-graph-gpu)
+    - [_4.2 Using the Visual Effects Graph (GPU)_](#42-using-the-visual-effects-graph-gpu)
   + [**5. ECS**](#5-ecs)
 
 ---
