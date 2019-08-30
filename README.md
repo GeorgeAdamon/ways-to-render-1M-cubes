@@ -37,11 +37,12 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
 ### Cube Representation
 #### Explicit (Mesh-Based)
 #### Implicit (SDF)
+#### Impostors (Single Quad)
 
-### Cube Rendering
-#### Procedural
-#### Instanced
-#### Raymarched
+### Cube Grid Rendering
+#### Procedural Meshing
+#### Instanced Rendering
+#### Raymarched SDF
 
 ---
 ---
