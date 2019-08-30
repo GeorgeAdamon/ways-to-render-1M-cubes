@@ -128,6 +128,7 @@ The shader is written to take care of the translation/scale/rotation of each ins
 * Each instance is drawn in the correct Z order, allowing correct transparency effects.
 
 ##### Cons
+* Bitonic GPU Sorting works correctly only if **2*N = 2<sup>k</sup>**, with N = Number of elements to sort.
 * Performance is dependent on the total amount of triangles that need to be rendered (Instances x Triangles per Instance)
 * No culling (occlusion or  frustrum) is performed automatically.
 * Not supported by every platform.
