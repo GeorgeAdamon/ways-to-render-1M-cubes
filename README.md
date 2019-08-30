@@ -3,11 +3,11 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
 **WIP: This repository will be filled with implementations over time**
 
 ## Index
-* [Concepts](#concepts) -----------------------------------------------------------------------------------------------
+* [Concepts -----------------------------------------------------------------------------------------------](#concepts)
   + [**Positional Data Generation**](#positional-data-generation)
   + [**Cube Representation**](#cube-representation)
-  + [**Rendering**](#rendering)
-* [Implementations](#implementations) ---------------------------------------------------------------------------------------
+  + [**Cube Grid Rendering**](#rendering)
+* [Implementations ---------------------------------------------------------------------------------------](#implementations)
   + [**1. Instanced Rendering**](#1-instanced-rendering)
     - [_1.1 Using Plain Old Mesh Renderers (POMR) & MaterialPropertyBlock_](#11-using-plain-old-mesh-renderers-pomr--materialpropertyblock)
     - [_1.2 Using DrawMeshInstanced & MaterialPropertyBlock_](#12-using-drawmeshinstanced--materialpropertyblock)
@@ -15,7 +15,7 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
     - [_1.4 Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting_](#14-using-drawmeshinstancedindirect-with-custom-gpu-z-sorting)
   + [**2. Procedural Meshing**](#2-procedural-meshing)
     - [_2.1 Generating the Cubes as a single Mesh_](#21-generating-the-cubes-as-a-single-mesh)
-    - [_2.2 Generating the Cubes using a Geometry Shader_](#-22-generating-the-cubes-using-a-geometry-shader)
+    - [_2.2 Generating the Cubes using a Geometry Shader_](#22-generating-the-cubes-using-a-geometry-shader)
     - [_2.3 "Stamping" the Cubes into a single Mesh_](#23-stamping-the-cubes-into-a-single-mesh)
   + [**3. Raymarching**](#3-raymarching)
     - [_3.1 Using a repeating Cube Signed Distance Field_](#31-using-a-repeating-cube-signed-distance-field)
