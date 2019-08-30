@@ -2,15 +2,22 @@
 All the ways to efficiently render 1 Million individually coloured cubes in Unity3d (I could think of).
 **WIP: This repository will be filled with implementations over time**
 
+---
+---
+
 ## Concepts
 ### Positional Data Generation
 ### Cube Representation
 ### Rendering
 
+---
+---
+
 ## Implementations
+
 ### 1. Instanced Rendering
 
-#### [1.1 Using MeshRenderers & MaterialPropertyBlock]()
+#### [1.1 Using Plain Old Mesh Renderers (POMR) & MaterialPropertyBlock]()
 ##### Description
 _Each cube is Instantiated as a separate GameObject with Transform, MeshFilter & MeshRenderer components attached to it. 
 The MeshFilters of all the cubes point to a single (shared) Mesh asset. 
@@ -141,6 +148,7 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 * Arbitrary, cube-like repeating SDFs are **impossible** to implement, if they can't be described as solid operations.
 * The cubes are incompatible-with and invisible-to any other Unity system (Real-time Lights, Lightmapping, Physics, Reflections etc)
 * Occlusion from other Unity objects has to be handled inside the shader. (It's not automatic)
+
 ---
 
 #### [3.2 Using a Volumetric RenderTexture]()
@@ -157,6 +165,8 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 ##### Description
 ##### Pros
 ##### Cons
+
+---
 
 #### [4.2 Using the Visual Effects Graph (GPU)]()
 ##### Description
