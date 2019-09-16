@@ -24,7 +24,7 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
   + [**4. Particles**](#4-particles)
     - [_4.1 Using the Shuriken (CPU) Particle System_](#41-using-the-shuriken-cpu-particle-system)
     - [_4.2 Using the Visual Effects Graph (GPU)_](#42-using-the-visual-effects-graph-gpu)
-  + [**5. ECS**](#5-ecs)
+  + [**5. ECS & Hybrid Renderer**](#5-ecs--Hybrid-Renderer)
 
 ---
 ---
