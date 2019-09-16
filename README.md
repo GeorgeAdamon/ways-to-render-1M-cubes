@@ -13,6 +13,7 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
     - [_1.2 Using DrawMeshInstanced & MaterialPropertyBlock_](#12-using-drawmeshinstanced--materialpropertyblock)
     - [_1.3 Using DrawMeshInstancedIndirect & Custom Shaders_](#13-using-drawmeshinstancedindirect--custom-shaders)
     - [_1.4 Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting_](#14-using-drawmeshinstancedindirect-with-custom-gpu-z-sorting)
+    - [_1.5 Clustering Individual Instances into 3D Tiles_](#15-clustering-individual-instancesi-into-3D-tiles)
   + [**2. Procedural Meshing**](#2-procedural-meshing)
     - [_2.1 Generating the Cubes as a single Mesh_](#21-generating-the-cubes-as-a-single-mesh)
     - [_2.2 Generating the Cubes using a Geometry Shader_](#22-generating-the-cubes-using-a-geometry-shader)
@@ -139,6 +140,7 @@ The shader is written to take care of the translation/scale/rotation of each ins
 _Instead of using 1 cube per instance, generate a Mesh that groups together multiple cubes, and use that as each instance's mesh. The more cubes each instance represents, the less instances need to be drawn. Conversely, the more cubes each instance represents, the larger the memory footprint. Edge case is when the mesh contains **all** of the cubes, therefore is rendered as one instance, storing **all** of its vertices in memory. See [2.1](#21-generating-the-cubes-as-a-single-mesh)_
 ##### Pros
 ##### Cons
+* Assigning **Per-Cube** properties, like Color, becomes trickier, since the number of colors will be larger than the number of instances being drawn. This has to be handled in the shader.
 
 ---
 ---
