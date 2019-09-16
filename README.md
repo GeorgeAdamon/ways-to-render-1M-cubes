@@ -13,7 +13,7 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
     - [_1.2 Using DrawMeshInstanced & MaterialPropertyBlock_](#12-using-drawmeshinstanced--materialpropertyblock)
     - [_1.3 Using DrawMeshInstancedIndirect & Custom Shaders_](#13-using-drawmeshinstancedindirect--custom-shaders)
     - [_1.4 Using DrawMeshInstancedIndirect with Custom GPU Z-Sorting_](#14-using-drawmeshinstancedindirect-with-custom-gpu-z-sorting)
-    - [_1.5 Clustering Individual Instances into 3D Tiles_](#15-clustering-individual-instancesi-into-3D-tiles)
+    - [_1.5 Clustering Individual Instances into 3D Tiles_](#15-clustering-individual-instances-into-3D-tiles)
   + [**2. Procedural Meshing**](#2-procedural-meshing)
     - [_2.1 Generating the Cubes as a single Mesh_](#21-generating-the-cubes-as-a-single-mesh)
     - [_2.2 Generating the Cubes using a Geometry Shader_](#22-generating-the-cubes-using-a-geometry-shader)
