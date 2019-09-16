@@ -134,6 +134,12 @@ The shader is written to take care of the translation/scale/rotation of each ins
 * Not supported by every platform.
 * Sorting a million instances every frame, adds a computational overhead.
 
+#### [1.5 Clustering Individual Instances into 3D Tiles]()
+##### Recipe
+_Instead of using 1 cube per instance, generate a Mesh that groups together multiple cubes, and use that as each instance's mesh. The more cubes each instance represents, the less instances need to be drawn. Conversely, the more cubes each instance represents, the larger the memory footprint. Edge case is when the mesh contains **all** of the cubes, therefore is rendered as one instance, storing **all** of its vertices in memory. See [2.1](#21-generating-the-cubes-as-a-single-mesh)_
+##### Pros
+##### Cons
+
 ---
 ---
 
@@ -179,7 +185,7 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 * Compatible with every platform by default.
 * Arbitrary, cube-like repeating SDFs are **very** easy to implement, if they can be described as solid operations.
 * Performance is **independent** of the total amount of instances that need to be rendered. Rendering 1 Cube is the same as 1 million cubes.
-* Smallest possible memory footprint, since the grid does not need any buffers whatsoever, it's all written as a distance function, which is evaluated continuously at runtime.
+* **Smallest possible memory footprint**, since the grid does not need any buffers whatsoever, it's all written as a distance function, which is evaluated continuously at runtime.
 ##### Cons
 * Custom cube shapes are **impossible** to implement, if they can't be described as solid operations.
 * The cubes are incompatible-with and invisible-to any other Unity system (Real-time Lights, Lightmapping, Physics, Reflections etc)
