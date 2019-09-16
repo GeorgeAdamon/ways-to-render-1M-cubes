@@ -208,9 +208,9 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 
 #### [4.2 Using the Visual Effects Graph (GPU)]()
 ##### Recipe
-_Generate a signed floating-point (R32G32B32) Texture, which encoded the positions of the cubes' centers as colors. (XYZ => RGB)._</br>
-_Spawn particles once, and use **Set Position From Map** at their birth using the Texture._</br>
-_Use a Mesh Output node, and choose the appropriate Cube Mesh.
+_1. Generate a signed floating-point (R32G32B32) Texture, which encoded the positions of the cubes' centers as colors. (XYZ => RGB)._</br>
+_2. Spawn particles once, and use **Set Position From Map** at their birth using the Texture._</br>
+_3. Use a Mesh Output node, and choose the appropriate Cube Mesh_.
 ##### Pros
 * Minimal code required, just for updating the Texture's values if the grid parameters change.
 ##### Cons
