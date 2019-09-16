@@ -181,9 +181,11 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 * Performance is **independent** of the total amount of instances that need to be rendered. Rendering 1 Cube is the same as 1 million cubes.
 * Smallest possible memory footprint, since the grid does not need any buffers whatsoever, it's all written as a distance function, which is evaluated continuously at runtime.
 ##### Cons
-* Arbitrary, cube-like repeating SDFs are **impossible** to implement, if they can't be described as solid operations.
+* Custom cube shapes are **impossible** to implement, if they can't be described as solid operations.
 * The cubes are incompatible-with and invisible-to any other Unity system (Real-time Lights, Lightmapping, Physics, Reflections etc)
 * Occlusion from other Unity objects has to be handled inside the shader. (It's not automatic)
+* Shadows, Diffuse Lighting and Reflections have to be implemented as raymarching functions inside the shader.
+* Writing to the Camera's Normal and Depth Buffer (for letting post-effects "see" the grid) has to be implemented from scratch.
 
 ---
 
@@ -205,11 +207,16 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 ---
 
 #### [4.2 Using the Visual Effects Graph (GPU)]()
-##### Description
+##### Recipe
+_Generate a signed floating-point (R32G32B32) Texture, which encoded the positions of the cubes' centers as colors. (XYZ => RGB)._</br>
+_Spawn particles once, and use **Set Position From Map** at their birth using the Texture._</br>
+_Use a Mesh Output node, and choose the appropriate Cube Mesh.
 ##### Pros
+* Minimal code required, just for updating the Texture's values if the grid parameters change.
 ##### Cons
+* The Visual Effects Graph doesn't work with the Legacy Unity rendering pipeline. Requires either URP/LWRP or HDRP.
 
 ---
 ---
 
-### 5. ECS
+### 5. ECS & Hybrid Renderer
