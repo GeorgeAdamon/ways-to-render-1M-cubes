@@ -16,7 +16,7 @@ All the ways to efficiently render 1 Million individually coloured cubes in Unit
     - [_1.5 Clustering Individual Instances into 3D Tiles_](#15-clustering-individual-instances-into-3D-tiles)
   + [**2. Procedural Meshing**](#2-procedural-meshing)
     - [_2.1 Generating the Cubes as a single Mesh_](#21-generating-the-cubes-as-a-single-mesh)
-    - [_2.2 Generating the Cubes using a Geometry Shader_](#22-generating-the-cubes-using-a-geometry-shader)
+    - [_2.2 Generating the Cubes using a Geometry Shader & DrawProcedural_](#22-generating-the-cubes-using-a-geometry-shader--draw-procedural)
     - [_2.3 "Stamping" the Cubes into a single Mesh_](#23-stamping-the-cubes-into-a-single-mesh)
   + [**3. Raymarching**](#3-raymarching)
     - [_3.1 Using a repeating Cube Signed Distance Field_](#31-using-a-repeating-cube-signed-distance-field)
