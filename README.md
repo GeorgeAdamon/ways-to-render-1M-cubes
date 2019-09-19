@@ -162,7 +162,7 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 
 ---
 
-#### [2.2 Generating the Cubes using a Geometry Shader]()
+#### [2.2 Generating the Cubes using a Geometry Shader & DrawProcedural]()
 ##### Description
 ##### Pros
 ##### Cons
