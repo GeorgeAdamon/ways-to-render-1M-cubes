@@ -189,7 +189,7 @@ _A single mesh containing the Vertices, Indices, Normals and Colors of all the c
 * Performance is **independent** of the total amount of instances that need to be rendered. Rendering 1 Cube is the same as 1 million cubes.
 * **Smallest possible memory footprint**, since the grid does not need any buffers whatsoever, it's all written as a distance function, which is evaluated continuously at runtime.
 ##### Cons
-* Custom cube shapes are **impossible** to implement, if they can't be described as solid operations.
+* Custom cube shapes need to be created as pre-baked volumetric textures (potentially high memory footprint), if they can't be described as solid operations.
 * The cubes are incompatible-with and invisible-to any other Unity system (Real-time Lights, Lightmapping, Physics, Reflections etc)
 * Occlusion from other Unity objects has to be handled inside the shader. (It's not automatic)
 * Shadows, Diffuse Lighting and Reflections have to be implemented as raymarching functions inside the shader.
